@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.plantshopv2.PlantShopController">
+    <left>
+        <VBox spacing="10">
+            <ListView fx:id="plantListView" prefHeight="200"/>
+            <ImageView fx:id="plantImageView" fitHeight="150" fitWidth="150"/>
+            <Label fx:id="plantDescriptionLabel" wrapText="true"/>
+            <Button fx:id="addToCartButton" text="Add to Cart" onAction="#handleAddToCart"/>
+        </VBox>
+    </left>
+    <center>
+        <TableView fx:id="cartTable">
+            <columns>
+                <TableColumn fx:id="cartNameColumn" text="Plant Name"/>
+                <TableColumn fx:id="cartPriceColumn" text="Price"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <Label fx:id="totalPriceLabel" text="Total: $0.00"/>
+    </bottom>
+</BorderPane>
